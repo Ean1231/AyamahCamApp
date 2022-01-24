@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar style="--background: #3CB371;" >
+    <ion-buttons slot="start">
+      <ion-back-button
+          [text]="buttonText"
+          [icon]="buttonIcon">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title style="text-align-last: center; color: white;"><h2>Select Site</h2></ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="margin-top: 30px;">
+    <div style="margin-left: 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #3CB371; font-size: 17px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam mo</div><br>
+  <ion-button class = "button button-block" style="--background: #3CB371;    margin-left: 5px;" [routerLink]="'/home'">Capture Image</ion-button><br>
+  <!-- <ion-button class = "button button-block" style=" --background: #3CB371; margin-left: 5px;" [routerLink]="'/site-b'">Site B</ion-button><br>
+  <ion-button class = "button button-block" style="--background: #3CB371;  margin-left: 5px;" [routerLink]="'/site-c'">Site C</ion-button><br>
+  <ion-button class = "button button-block" style="--background: #3CB371;    margin-left: 5px;" [routerLink]="'/site-d'">Site D</ion-button><br> -->
+  <!-- <ion-button class = "button button-block" style="--background: #3CB371;   width: 350px; margin-left: 5px;" [routerLink]="'/home'">Site E</ion-button><br>
+  <ion-button class = "button button-block" style="--background: #3CB371;  width: 350px; margin-left: 5px;" [routerLink]="'/home'">Site F</ion-button> -->
+<ion-button [routerLink]="'/scanner'" class = "button button-block" style="--background: #3CB371;    margin-left: 5px;" >Scan Docs</ion-button>
+</div>
+
+ 
+</ion-content>

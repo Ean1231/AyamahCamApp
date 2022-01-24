@@ -1,0 +1,6 @@
+{
+	"appId": "com.example.scaningcapasitorapp",
+	"appName": "Scaning-Capacitor-App",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

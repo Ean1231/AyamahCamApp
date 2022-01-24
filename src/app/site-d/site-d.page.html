@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar style="--background: #3CB371; color: white;">site D
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" (click)="btnBack()"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="cameraPreview" class="cameraPreview">
+    <ion-img name="image" [src]="image" *ngIf="image && !cameraActive"></ion-img>
+
+  </div>
+  <div *ngIf="cameraActive" >
+
+    <!-- <ion-button (click)="stopCamera()" expend="block" id="close">
+      <ion-icon name="close-circle" slot="icon-only"></ion-icon>
+    </ion-button> -->
+
+    <ion-button (click)="captureImage()" expend="block" id="capture">
+      <ion-icon name="camera" slot="icon-only"></ion-icon>
+    </ion-button>
+
+    <!-- <ion-button (click)="flipCamera()" expend="block" id="flip">
+      <ion-icon name="camera-reverse" slot="icon-only"></ion-icon>
+    </ion-button> -->
+
+  </div><br>
+<ion-button (click)="openCamera()" style="--background: #3CB371;"  expand="full" *ngIf="!cameraActive">Open Cam</ion-button><br>
+<ion-button (click)="Add(saveImg)" style="--background: #3CB371;" expand="full" >Save</ion-button>
+
+</ion-content>

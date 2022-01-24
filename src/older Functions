@@ -1,0 +1,106 @@
+// image = null;
+// cameraActive = false;
+// img;
+// saveImg;
+// path: string;
+// showmessage :boolean;
+// captureDataUrl: string;
+// alertCtrl: AlertController;
+
+
+//   openCamera(){
+//     const CameraPreviewOptions: CameraPreviewOptions = {
+//       position: 'rear',
+//       parent: 'cameraPreview',
+//       className: 'cameraPreview'
+//     };
+//     CameraPreview.start(CameraPreviewOptions);
+//     this.cameraActive = true;
+//   }
+
+//  async stopCamera(){
+//     await CameraPreview.stop();
+//     this.cameraActive = false;
+//   }
+//  async captureImage(){
+//     const CameraPreviewPictureOptions: CameraPreviewPictureOptions = {
+//       quality: 90,
+      
+//     };
+//     const result = await CameraPreview.capture(CameraPreviewPictureOptions);
+//     this.image = `data:image/jpeg;base64, ${result.value}`;
+//     this.stopCamera();
+//   }
+//   getPicture(sourceType) {
+//     const cameraOptions: CameraOptions = {
+//       quality: 50,
+//       destinationType: this.camera.DestinationType.DATA_URL,
+//       encodingType: this.camera.EncodingType.JPEG,
+//       mediaType: this.camera.MediaType.PICTURE,
+//       sourceType: sourceType
+//     };
+
+//     this.camera.getPicture(cameraOptions)
+//       .then((captureDataUrl) => {
+//         this.captureDataUrl = 'data:image/jpeg;base64,' + captureDataUrl;
+//       }, (err) => {
+//         console.log(err);
+//       });
+//   }
+
+//   flipCamera(){
+//     CameraPreview.flip();
+//   }
+  
+//   upload($event) {
+//     this.path = $event.target.files[0];
+//   }
+
+//   getImage(event) {
+//     let reader = new FileReader(); // HTML5 FileReader API
+//     let file = event.target.files[0];
+//     if (event.target.files && event.target.files[0]) {
+//       reader.readAsDataURL(file);
+  
+//       // When file uploads set it to file formcontrol
+//       reader.onload = () => {
+//         this.img = reader.result;
+//       };
+//   // ChangeDetectorRef since file is loading outside the zone
+  
+//     }
+//   }
+
+//   btnBack(){
+//     this.router.navigateByUrl("select-s-site");
+//   }
+  
+ 
+//   Add(image) {
+//     const currentTime = new Date();
+//     console.log(currentTime);
+
+//     console.log(this.image);
+//     let id = this.firestore.createId();
+//     this.firestore.collection('SiteA').doc().set({
+//       image : this.image,
+//       currentTime: currentTime
+
+//   }).then(()=>{
+//     this.showmessage = true
+//     setTimeout(()=> this.showmessage = false, 2000);
+//     this.image = "";
+//   }).catch((error)=>{
+//     console.log(error)
+//   })
+// }
+
+//constructor(public router: Router, public firestore: AngularFirestore){}
+
+//check is scanner is running on browser
+// if (this.platform.is('android')) {
+//     this.myPlatform = "Browser";
+//     console.log('I am on a web browser')
+//   } else {
+//     this.mobileDevice = "True"
+//   }
